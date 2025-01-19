@@ -18,7 +18,7 @@
       in
       {
         devShells.default = pkgs.mkShell.override { stdenv = pkgs.clangStdenv; } {
-          buildInputs = with pkgs; [ xmake ];
+          buildInputs = with pkgs; [ xmake cmake ];
         };
       }
     );
