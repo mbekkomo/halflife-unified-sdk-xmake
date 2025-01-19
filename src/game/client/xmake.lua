@@ -5,6 +5,7 @@ add_requires("opengl")
 target("vgui")
 do
   set_kind("shared")
+  set_prefixname("")
   on_build("windows", function(target)
     local vgui_libdir = path.join(os.projectdir(), "utils", "vgui", "lib", "win32_vc6")
     os.cp(path.join(vgui_libdir, "vgui.lib"), target:targetfile())
